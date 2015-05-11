@@ -3,9 +3,6 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-page {
-	background: black;
-}
 .navbar-brand-first {
 	background-image: 	url(../img/ETC-Logo_smalll.png);
 	background-position: left center;
@@ -35,4 +32,8 @@ audio {
 }
 .social-block h2{
 	text-align: center;
+}
+
+.twitter-tweet {
+	padding-top: 2px;
 }
