@@ -30,7 +30,7 @@ audio {
 }
 
 }
-.social-block.btn.btn-default {
+.social-block .btn {
 	width: 98%;
 }
 .social-block h2{
