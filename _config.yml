@@ -1,2 +1,3 @@
 name: ETC. The Greatest Band Of All Time
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
