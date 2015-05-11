@@ -1,0 +1,38 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+page {
+	background: black;
+}
+.navbar-brand {
+	background-image: 	url(../img/ETC-Logo_smalll.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 65px;
+}
+.jumbotron {
+    background-color: #fff;
+	background-image: url(../img/etc-logo-copy-0.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding-top: 100px;
+}
+.col-md-4{
+/*
+    border-radius: 25px;
+    background: #5C595A;
+*/
+}
+audio {
+	width: 85%;
+}
+
+}
+.social-block .btn {
+	width: 98%;
+}
+.social-block h2{
+	text-align: center;
+}
