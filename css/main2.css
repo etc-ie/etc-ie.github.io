@@ -1,0 +1,39 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.navbar-brand {
+	background-image: 	url(../img/ETC-Logo_smalll.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 65px;
+}
+.jumbotron {
+    background-color: #fff;
+
+/* 	background-image: url(../img/the_inter_crop_1.jpg); */
+/* background-image: url(http://mulrooneydesign.com/apps/ETC/images/etc-logo.png);  */
+    background-image: url(../img/etc-logo copy.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding-top: 110px;
+}
+
+.col-md-4{
+/*
+    border-radius: 25px;
+    background: #5C595A;
+*/
+}
+audio {
+	width: 85%;
+}
+
+
+.social-block .btn {
+	width: 98%;
+}
+.social-block h2{
+	text-align: center;
+}
