@@ -45,7 +45,7 @@ audio {
 
 }
 body{
-background: url(https://download.unsplash.com/18/trickle.JPG)top centre no-repeat;	
+background-image: url(https://download.unsplash.com/18/trickle.JPG)top centre no-repeat;	
 }
 .container{
 	background: transparent;
