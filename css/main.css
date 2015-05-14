@@ -48,5 +48,5 @@ body{
 background-image: url("download.unsplash.com/18/trickle.JPG") top center no-repeat;	
 }
 .container{
-	background: transparent;
+	background: none;
 }
