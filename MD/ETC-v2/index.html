@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ETC - Music</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<!-- Audio.js -->
+		<script src="js/audio.min.js"></script>		
+		<!-- Slidebars CSS -->
+		<link rel="stylesheet" href="css/slidebars.css">
+		
+		<!-- Example Styles -->
+		<link rel="stylesheet" href="css/example-styles.css">
+		<!-- Animate CSS -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<!--MY Styles -->
+		<link rel="stylesheet" href="css/styles.css">
+		
+		
+		
+	</head>
+	
+	<body>
+		<!-- Start of main site --><!-- Start of main site -->	
+		<ul class="menu-button sb-slide">
+			<li class="sb-toggle-left"><i class="glyphicon glyphicon-menu-hamburger"></i></li>
+		</ul>
+		<div id="sb-site">
+			<br>
+			<br>
+			<br>
+				
+			<div class="row  animated fadeInDown">
+				<div class="col-md-6 col-md-offset-3 panel">
+					<img class="main-logo animated fadeInDown" src="images/etc-logo.png" alt="ETC logo">
+					 <p><a id="nepal-l" class="nepal" href="https://www.unicef.ie/Emergency/Nepal-Childrens-Crisis-75-55.aspx?gclid=CJKojM2mpsUCFWOu2wodTCEAhw"><img src="images/unicef_logo_small.gif" alt="unicef_logo_small"></p>
+						<p>Nepal Children's Crisis Donate Here</a></p><hr>
+					<h2 id="wise-words" class="intro-head animated slideInRight"></h2>
+				<!-- audio.js -->
+				<div id="wrapper">
+					<h3>ETC. Live At The Inter <em>(2015)</em></h3>
+					<audio preload></audio>
+					<ol>
+						<li><a href="#" data-src="audio/live-at-inter/01ETC.m4a">ETC</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/02AMillionOtherLives.m4a">A Million Other Lives</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/03BringMyIslandToTheCoast.m4a">Bring My Island To The Coast</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/04FuckYourSelfie.m4a">Fuck YourSelfie</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/05SuckerForReaction.m4a">Sucker For Reaction</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/06IDontThinkSo.m4a">I Don't Think So</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/07NoSmokingPlease.m4a">No Smoking Please</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/08CoffeeAndSunShine.m4a">Coffee And Sunshine</a></li>
+						<li><a href="#" data-src="audio/live-at-inter/09SomeOneElsesFuture.m4a">Someone Elses Future</a></li>
+					</ol>
+				</div>
+				<!-- end audio js-->
+				</div>
+			</div>
+		</div>
+		<!-- end of main site --><!-- end of main site -->
+		
+		
+		
+		<!-- The sidebar menu -->
+		<div class="sb-slidebar sb-left">
+			<ul>				
+				<li><a href="index.html"><img class="menu-logo" src="images/etc-logo.png" alt="ETC logo"></a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="bios.html">ETC bios</a></li>
+				<li><a href="blog.html">It's a blog</a></li>
+				<li><a href="contact.html">Get in touch</a></li>
+			</ul>
+		</div>
+			
+		<!-- Slidebars -->
+		<script src="js/slidebars.js"></script>
+		<script src="js/etc.js"></script>
+		<script>
+			(function($) {
+				$(document).ready(function() {
+					$.slidebars();
+				});
+			}) (jQuery);
+		</script>
+		<script>
+      $(function() { 
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+          trackEnded: function() {
+            var next = $('ol li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+          }
+        });
+        
+        // Load in the first track
+        var audio = a[0];
+            first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', this).attr('data-src'));
+          audio.play();
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+          var unicode = e.charCode ? e.charCode : e.keyCode;
+             // right arrow
+          if (unicode == 39) {
+            var next = $('li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.click();
+            // back arrow
+          } else if (unicode == 37) {
+            var prev = $('li.playing').prev();
+            if (!prev.length) prev = $('ol li').last();
+            prev.click();
+            // spacebar
+          } else if (unicode == 32) {
+            audio.playPause();
+          }
+        })
+      });
+    </script>
+	</body>
+</html>

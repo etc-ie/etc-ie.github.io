@@ -1,0 +1,432 @@
+@font-face{ 
+	font-family: 'BebasNeue-webfont';
+	src:     url('../fonts/BebasNeue-webfont.ttf') format('truetype');
+}
+
+.nepal {
+	color: #fff;
+}
+
+.nepal:hover {
+	color: #72d3f7;
+}
+
+body, html, main {
+	/* important */
+	height: 100%;
+	color: #fff;
+	font-family: 'Montserrat', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*these are the MENU styles*/
+ul > li > a, ul > li{
+	list-style-type: none;
+}
+
+li >.glyphicon {
+	font-size: 30px;
+	padding: 5px;
+	border-radius: 3px;
+	color: #72d3f7;
+}
+
+li >.glyphicon:hover {
+	color: white;
+	background-color: #72d3f7;
+}
+
+.menu-button {
+	position: fixed;
+	top: 18px;
+	left: 20px;
+	z-index: 20;	
+}
+
+
+.sb-slidebar > ul > li > a {
+	font-size: 2.2em;
+	line-height: 1.8em;
+	padding-top: 20px;
+	text-align: center;
+	border-bottom: 1px dashed #10797E;
+	letter-spacing: 2px;
+}
+
+.sb-slidebar > ul > li > a {
+ color: white;
+ top: -10px;
+ padding-bottom: 14px;	
+}
+
+.sb-slidebar > ul > li > a:hover, .sb-slidebar > ul > li > a:active {
+	text-decoration: none;
+	color: #6bd1f6;
+	background-color: #FFF100;
+	transition: all 0.6s;
+}
+ul {
+list-style-type: disc;
+-webkit-margin-before: 0;
+-webkit-margin-after: 0;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0px;
+}
+
+ul li a { 
+	display:block; 
+	font-family: 'BebasNeue-webfont', sans-serif;
+	text-transform: uppercase;
+}
+
+.menu-logo {
+	width: 60%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;	
+	margin-top: 20px;
+}
+
+.main-logo {
+	width: 50%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;	
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+body{
+
+		font-family: 'Montserrat', sans-serif;
+}
+
+p {	
+	font-size: 1.2em;
+}
+
+p.day {
+	color: #72D3F7;
+	background-color: #fff;
+	background-color: rgba(255,255,255,0.6);
+	text-transform: uppercase;
+	font-family: 'BebasNeue-webfont', sans-serif;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 100px;
+}
+
+h1 {
+	font-size: 6em;
+}
+h1.intro-head , h2.intro-head {
+	text-align: center;
+	padding: 20px;
+	color:  #FFF100;
+	background-color:#72D3F7;	
+ 	font-family: 'BebasNeue-webfont', sans-serif;
+}
+
+ h2.intro-head { 
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 1.6em;
+ }
+ 
+ h2.etc-bio-header {
+	color: #72D3F7;
+	background-color:#333;	
+	text-transform: uppercase;
+	font-family: 'BebasNeue-webfont', sans-serif;
+	font-size: 3em;
+	border-radius: 100px;
+ }
+ 
+span.date-blog {
+	color: #fff;
+	
+ }
+
+ p.left-para {
+	text-align: left;
+	font-size: 1.6em;
+ }
+ 
+ 
+.panel {
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: rgba(255,255,255, 0.2);
+	color: #fff;
+	border-bottom: 4px solid #fff;
+ }
+ 
+ .events-li {
+	font-size: 2em;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: rgba(255,255,255, 0.2);
+	color: #fff;
+	border-bottom: 4px solid #fff;
+ }
+ 
+ .events-li li {
+	padding: 20px;
+ }
+ 
+ 
+/*Skrollr*/
+#progress {
+	height:5px;
+	background:#444;
+	bottom:0;
+	z-index:200;
+}
+
+
+html, body {
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+	/*
+		May cause issues on Android default browser (see #331 on GitHub).
+	*/
+	position:absolute;
+}
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
+
+/*forms*/
+input, textarea, select {
+  width : 100%;
+  margin: 0;
+}
+	
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=url],
+textarea{
+	font-size: 1.2em;
+	color: #333;
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	border-radius: 5px;
+}	
+
+form#contact label {
+	float: left;
+	font-size: 1.2em;	
+}
+
+button {
+	font-size: 2.2em;	
+	padding: 10px 20px;	
+	border-radius: 100px;
+	color:  #FFF100;
+	background-color:#72D3F7;	
+ 	font-family: 'BebasNeue-webfont', sans-serif;	
+	border: none;
+	transition: all .5s;
+}
+
+button:hover{
+	background-color:  #FFF100;
+	color:#72D3F7;	
+	transition: all .5s;
+}
+
+textarea {
+	min-height: 200px;
+}
+
+
+/*background animate*/
+body{
+	margin:0;
+	padding:0;
+    background: #333 url('../images/city.png') repeat 0 0;
+	-webkit-animation: 80s linear 0s normal none infinite animate;
+	-moz-animation: 80s linear 0s normal none infinite animate;
+	-ms-animation: 80s linear 0s normal none infinite animate;
+	-o-animation: 80s linear 0s normal none infinite animate;
+	animation: 80s linear 0s normal none infinite animate;
+
+}
+ 
+@-webkit-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 2978px 0;}
+}
+ 
+@-moz-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 2978px 0;}
+}
+ 
+@-ms-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 2978px 0;}
+}
+ 
+@-o-keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 2978px 0;}
+}
+ 
+@keyframes animate {
+	from {background-position:0 0;}
+	to {background-position: 2978px 0;}
+}
+
+/*Audio.js*/
+#wrapper { 
+	width: 100%;; 
+	margin: 40px auto; 
+}
+
+.audiojs {
+	width: 100%;
+	background-image: none;
+	background-color: #333;
+}
+ 
+.audiojs .play-pause {
+	border-right: none;
+}
+
+.audiojs .progress {
+	background-image: none;
+	color: #72D3F7;
+}
+
+.duration:after {
+	content: "Preview out now! Stream it here today.";
+	font-size: 1.2em; 
+	position: relative;
+	left: 20px;
+	color:  #72D3F7;
+}
+ 
+ol li a {
+	color: white;
+}
+
+ol li a:hover, ol li a:active {
+	color: #FFF100;
+	text-decoration: none;
+}
+ 
+ 
+ol { padding: 0px; 
+	margin: 0px; 
+	list-style: decimal-leading-zero inside; 
+	text-align: left;
+	color: #ccc; 
+	width: 100%; 
+	border-top: 1px solid #ccc; 
+	font-size: 1.2em; 
+}
+
+ol li { position: relative;
+	margin: 0px;
+	padding: 9px 2px 10px;
+	border-bottom: 1px solid #fff;
+	cursor: pointer; 
+}
+
+ol li a { display: block;
+	text-indent: -3.3ex;
+	padding: 0px 0px 0px 40px; 
+}
+
+li.playing a { 
+	color: #72D3F7; 
+}
+
+li.playing:before { 
+	content: '>  '; 
+	width: 14px; 
+	height:14px;
+	padding: 3px;
+	line-height: 14px;
+	margin: 0px;
+	position: absolute;
+	left: -10px;
+	top: 9px;
+	color: #72D3F7;
+	font-size: 13px;
+}
+
+/*Media Queries ETC*/
+
+@media (max-width: 769px) { 
+
+	 body {
+		 background: none;
+		 background: #333;
+		 padding: 0 20px;
+	 }
+	 
+	 .events-li {
+			font-size: 1.2em;
+	 }
+	 
+	 h1.intro-head {
+		font-size: 5em;
+		line-height: 1em;
+	 }
+	 
+	 h2.intro-head {
+		font-size: 1.5em;
+	 }
+	 
+	 p.left-para {
+		font-size: 1.2em;
+	 }
+	 
+	 h2.etc-bio-header {
+		font-size: 2em;
+	 }
+	 
+	 .sb-slidebar > ul > li > a {
+	font-size: 2em;
+	line-height: 1.2em;
+	}
+
+	 
+}
+
+
