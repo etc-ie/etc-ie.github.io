@@ -3,6 +3,15 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+body {
+	    background-image: url("https://download.unsplash.com/18/trickle.JPG"); 
+/* 		background-image: url("../img/The-International-Bar.jpg"); */
+/* 		background-image: url("../img/live-at-the-inter-bg.jpg"); */
+	    background-position: center top;	    
+	    background-repeat: no-repeat;
+	    background-color: black;
+}
 .navbar-brand-first {
 	background-image: 	url(../img/ETC-Logo_smalll.png);
 	background-position: left center;
@@ -10,18 +19,17 @@
 	padding-left: 65px;
 }
 .jumbotron {
-/*     background-image: url("https://download.unsplash.com/18/trickle.JPG");  */
-
-/*
-	background-position: top center;
-	background-repeat: no-repeat;
-	padding-top: 100px;
-*/
-background-color: #fff;
+    background: none;
 }
 
 .jumbotron h1 {
 /* 	color: white; */
+}
+
+.well {
+	background-color: transparent;
+	background-image: url("../img/trans-bg.png");
+	background-repeat: repeat;
 }
 
 .col-md-4{
@@ -44,4 +52,8 @@ audio {
 
 .twitter-tweet {
 	padding-top: 2px;
+}
+
+footer {
+/* 	background-color: black; */
 }
