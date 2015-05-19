@@ -6,11 +6,11 @@
 
 body {
 /* 	    background-image: url("../img/download03-2200px.jpg");  */
-	    background-image: url("../img/trickle-1400px.jpg"); 
-/* 	    background-image: url("https://download.unsplash.com/18/trickle.JPG");  */
+	    background-image: url("../img/trickle-1400px.jpg");
+/* 	  background-image: url("https://download.unsplash.com/18/trickle.JPG");  */
 /* 		background-image: url("../img/The-International-Bar.jpg"); */
 /*  	background-image: url("../img/live-at-the-inter-bg-001-2200px.jpg"); */
-	    background-position: center top;	    
+	    background-position: center top;
 	    background-repeat: repeat-y;
 	    background-color: black;
 }
