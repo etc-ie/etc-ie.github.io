@@ -9,3 +9,5 @@ github_username:  etcindependent
 
 # Build settings
 markdown: kramdown
+prose:
+  rooturl: '_posts'
