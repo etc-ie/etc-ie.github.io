@@ -1,0 +1,11 @@
+# Site settings
+title: ETC. The Home Of ETC. On The InterWeb
+email: info@etc.ie
+description: > # this means to ignore newlines until "baseurl:"
+  ETC. The Home Of ETC. On The InterWeb…
+url: "http://etc.ie" # the base hostname & protocol for your site
+twitter_username: etcindependent
+github_username:  etcindependent
+
+# Build settings
+markdown: kramdown
