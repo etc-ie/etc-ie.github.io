@@ -22,12 +22,12 @@ p {
 }
 
 #divMain {
-    width: 100%;
+    width: 500px;
     margin: 60px auto;
 }
 
 #divBpm {
-    width: 180px;
+    width: 80px;
     margin: 0 auto;
     border: 1px solid #c0c0c0;
     text-align: center;
