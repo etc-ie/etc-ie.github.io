@@ -5,3 +5,8 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+.sm2-container {
+	height: 0px;
+	width: 0px;
+}
