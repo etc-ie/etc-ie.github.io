@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- required -->
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/360player.css" />
+<link rel="stylesheet" type="text/css" href="css/360player-visualization.css" />
+<!-- special IE-only canvas fix -->
+<!--[if IE]><script type="text/javascript" src="script/excanvas.js"></script><![endif]-->
+
+<!-- Apache-licensed animation library -->
+<script type="text/javascript" src="script/berniecode-animator.js"></script>
+<!-- the core stuff -->
+<script type="text/javascript" src="script/soundmanager2.js"></script>
+<script type="text/javascript" src="script/360player.js"></script>
+
+<script type="text/javascript">
+
+soundManager.setup({
+  // path to directory containing SM2 SWF
+  url: 'swf/'
+});
+
+threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
+threeSixtyPlayer.config.showHMSTime = true;
+
+// enable some spectrum stuffs
+
+threeSixtyPlayer.config.useWaveformData = true;
+threeSixtyPlayer.config.useEQData = true;
+
+// enable this in SM2 as well, as needed
+
+if (threeSixtyPlayer.config.useWaveformData) {
+  soundManager.flash9Options.useWaveformData = true;
+}
+if (threeSixtyPlayer.config.useEQData) {
+  soundManager.flash9Options.useEQData = true;
+}
+if (threeSixtyPlayer.config.usePeakData) {
+  soundManager.flash9Options.usePeakData = true;
+}
+
+if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
+  // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
+  soundManager.preferFlash = true;
+  
+}
+
+// favicon is expensive CPU-wise, but can be enabled.
+threeSixtyPlayer.config.useFavIcon = false;
+threeSixtyPlayer.config.playNext = true;
+
+</script>
+</head>
+
+<body>
+<div class="container">
+  
+  <div class="jumbotron">
+    <h1>ETC. Live At The Inter</h1>
+  </div>
+  
+<div class="container">
+  <div class="row">
+  		
+
+  		<div class="ui360 ui360-vis col-sm-4 well well-lg">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+
+</div> <!-- container -->
+</body>
