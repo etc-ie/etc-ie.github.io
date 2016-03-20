@@ -5,3 +5,7 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+.sm2-container {
+	visibility: hidden;
+}
