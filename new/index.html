@@ -30,16 +30,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<script>
-  $(document).ready(function() {  
-  		 $("#myCarousel").swiperight(function() {  
-    		  $(this).carousel('prev');  
-	    		});  
-		   $("#myCarousel").swipeleft(function() {  
-		      $(this).carousel('next');  
-	   });  
-	});  
-</script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -528,5 +518,15 @@ $(document).ready(function(){
 })
 </script>
 
+<script>
+  $(document).ready(function() {  
+  		 $("#myCarousel").swiperight(function() {  
+    		  $(this).carousel('prev');  
+	    		});  
+		   $("#myCarousel").swipeleft(function() {  
+		      $(this).carousel('next');  
+	   });  
+	});  
+</script>
 </body>
 </html>
