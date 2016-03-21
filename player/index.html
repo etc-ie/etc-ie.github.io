@@ -18,54 +18,29 @@
 
 <!-- required -->
 <link rel="stylesheet" type="text/css" href="css/main.css" />
+<!--
 <link rel="stylesheet" type="text/css" href="css/360player.css" />
 <link rel="stylesheet" type="text/css" href="css/360player-visualization.css" />
+-->
+<link rel="stylesheet" type="text/css" href="css/bar-ui.css" />
 <!-- special IE-only canvas fix -->
 <!--[if IE]><script type="text/javascript" src="script/excanvas.js"></script><![endif]-->
 
 <!-- Apache-licensed animation library -->
-<script type="text/javascript" src="script/berniecode-animator.js"></script>
 <!-- the core stuff -->
 <script type="text/javascript" src="script/soundmanager2.js"></script>
-<script type="text/javascript" src="script/360player.js"></script>
+<script type="text/javascript" src="script/bar-ui.js"></script>
 
-<script type="text/javascript">
-
+<script>
 soundManager.setup({
-  // path to directory containing SM2 SWF
-  url: 'swf/'
+  url: '/swf/',
+  flashVersion: 9, // optional: shiny features (default = 8)
+  // optional: ignore Flash where possible, use 100% HTML5 mode
+  // preferFlash: false,
+  onready: function() {
+    // Ready to use; soundManager.createSound() etc. can now be called.
+  }
 });
-
-threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
-threeSixtyPlayer.config.showHMSTime = true;
-
-// enable some spectrum stuffs
-
-threeSixtyPlayer.config.useWaveformData = true;
-threeSixtyPlayer.config.useEQData = true;
-
-// enable this in SM2 as well, as needed
-
-if (threeSixtyPlayer.config.useWaveformData) {
-  soundManager.flash9Options.useWaveformData = true;
-}
-if (threeSixtyPlayer.config.useEQData) {
-  soundManager.flash9Options.useEQData = true;
-}
-if (threeSixtyPlayer.config.usePeakData) {
-  soundManager.flash9Options.usePeakData = true;
-}
-
-if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
-  // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
-  soundManager.preferFlash = true;
-  
-}
-
-// favicon is expensive CPU-wise, but can be enabled.
-threeSixtyPlayer.config.useFavIcon = false;
-threeSixtyPlayer.config.playNext = true;
-
 </script>
 
 <!--
@@ -94,54 +69,121 @@ Logo img/etc-logo.png
 
 <body>
 
-
+<div class="container">
 	<div id="sm2-container">
 	  <!-- sm2 flash goes here -->
 	</div>
 
 		<!-- here are the MP3 links, which are decorated with the 360 canvas element/UI etc. -->
 	
-<div class="sm2-inline-list"> <!-- remove this class to have one item per line --> 
-		
-		<div class="ui360 ui360-vis">
+<!-- <div class="sm2-inline-list"> <!-- remove this class to have one item per line -->  
+<div class="row">
+
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
 		<a href="audio/01ETC.m4a">01 ETC.</a>
 		</div>
+		<p>01 ETC.</p>
+		</div>
 
-		<div class="ui360 ui360-vis">
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+		
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+</div>
+		
+<div class="row">
+
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+		
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+</div>
+
+<div class="row">
+
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+		
+		<div class="container well col-sm-4">
+		<div class="sm2-bar-ui">
+		<a href="audio/01ETC.m4a">01 ETC.</a>
+		</div>
+		<p>01 ETC.</p>
+		</div>
+</div>
+		
+		<div class="sm2-bar-ui">
 		<a href="audio/02AMillionOtherLives.m4a">02 A Million Other Lives</a>
 		</div>
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/03BringMyIslandToTheCoast.m4a">03 Bring My Island To The Coast</a>
 		</div>
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/04FuckYourSelfie.m4a">04 Fuck Your Selfie</a>
 		</div>
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/05SuckerForReaction.m4a">05 Sucker For Reaction</a>
 		</div>	
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/06IDontThinkSo.m4a">06 I Don't Think So</a>			
 		</div>	
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/07NoSmokingPlease.m4a">07 No Smoking Please</a>
 		</div>
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/08CoffeeAndSunShine.m4a">08 Coffee And Sunshine</a>
 		</div>
 
-		<div class="ui360 ui360-vis">
+		<div class="sm2-bar-ui">
 		<a href="audio/09SomeOneElsesFuture.m4a">09 Some One Else's Future</a>
 		</div>
 
 
-</div> <!--  sm2-inline-list -->
+<!-- </div> <!--  sm2-inline-list --> 
 
-
+</div>
 </body>
 </html>
