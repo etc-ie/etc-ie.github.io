@@ -14,7 +14,7 @@
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="js/bootstrap-touch-carousel.js"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
   <script type="application/ld+json">
     {  "@context" : "http://schema.org",
        "@type" : "WebSite",
@@ -29,23 +29,21 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script>
-$(document).ready(function() {  
 
-					//Enable swiping...
-					$(".carousel-inner").swipe( {
-						//Generic swipe handler for all directions
-						swipeLeft:function(event, direction, distance, duration, fingerCount) {
-							$(this).parent().carousel('prev'); 
-						},
-						swipeRight: function() {
-							$(this).parent().carousel('next'); 
-						},
-						//Default is 75px, set to 0 for demo so any distance triggers swipe
-						threshold:0
-					});
-				});
+<script type="text/javascript">
+    $(function() {
+  $("#test").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      $(this).text("You swiped " + direction );  
+    }
+  });
+
+  //Set some options later
+  $("#test").swipe( {fingers:2} );
+});
 </script>
+
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
