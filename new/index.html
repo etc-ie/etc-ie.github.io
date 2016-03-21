@@ -31,17 +31,23 @@
     <![endif]-->
 
 <script type="text/javascript">
-    $(function() {
-  $("#test").swipe( {
-    //Generic swipe handler for all directions
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      $(this).text("You swiped " + direction );  
-    }
-  });
+<script>
+$(document).ready(function() {  
 
-  //Set some options later
-  $("#test").swipe( {fingers:2} );
-});
+					//Enable swiping...
+					$(".carousel-inner").swipe( {
+						//Generic swipe handler for all directions
+						swipeLeft:function(event, direction, distance, duration, fingerCount) {
+							$(this).parent().carousel('prev'); 
+						},
+						swipeRight: function() {
+							$(this).parent().carousel('next'); 
+						},
+						//Default is 75px, set to 0 for demo so any distance triggers swipe
+						threshold:0
+					});
+				});
+</script>
 </script>
 
 </head>
