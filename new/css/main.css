@@ -38,11 +38,13 @@
   .carousel-caption h3 {
       color: #fff !important;
   }
+/*
   @media (max-width: 600px) {
     .carousel-caption {
       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
+*/
   .bg-1 {
       background: #2d2d30;
       color: #bdbdbd;
@@ -202,4 +204,21 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Disable The Bootstrap 3 Navbar Collapse */
+.navbar-collapse.collapse{
+  display: block !important;
+}
+
+.navbar-nav>li, .navbar-nav{
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child{
+  margin-right: -15px !important;
+}
+
+.navbar-right{
+  float: right !important;
 }
