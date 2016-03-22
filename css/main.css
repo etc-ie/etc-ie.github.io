@@ -1,43 +1,190 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 25px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner fill img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
 
-body {
-/* 	    background-image: url("../img/download03-2200px.jpg");  */
-/* 	    background-image: url("../img/trickle-1400px.jpg"); */
- 	    background-image: url("../img/etc-google-images-bg002.jpg");
-/* 	  background-image: url("https://download.unsplash.com/18/trickle.JPG");  */
-/* 		background-image: url("../img/The-International-Bar.jpg"); */
-/*  	background-image: url("../img/live-at-the-inter-bg-001-2200px.jpg"); */
-	    background-position: center top;
-	    background-repeat: repeat-y;
-	    background-color: black;
+  #band img, #gigs img  {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+    @media (max-width: 600px) {
+    .carousel-caption {
+	    /* Hide the carousel text when the screen is less than 600 pixels wide */
+/* 	          display: none; */
+    }
+  }
+.carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial;
 }
 
-.navbar-brand-first {
-	background-image: 	url(../img/ETC-Logo_smalll.png);
-	background-position: left center;
-	background-repeat: no-repeat;
-	padding-left: 65px;
-}
-.jumbotron {
-    background: none;
-}
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  
 
-.jumbotron h1 {
-	color: white;
+/*
+  .navbar-nav > li > a {
+	  padding-top: 0;
+	  padding-bottom: 0;
+  }
+  
+  .navbar-brand {
+	  
+	  padding: 0;
+  }  
+*/
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: transparent;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: transparent !important; 
+      background-image: url(../img/nav-active-bg-50.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+  }
+  navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #555;
 }
-
-.page-title {
-  	color: white;
-    text-shadow: 3px 3px 10px #000000, -3px -3px 10px #000000;
-}
-
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+/* My Styles */
 .well {
 	background-color: transparent;
 	background-image: url("../img/trans-bg.png");
 	background-repeat: repeat;
 }
+#music .well {
+	background-color: transparent;
+	background-image: none;
+	background-repeat: repeat;
+}
+
 
 .well h4 {
     text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff;
@@ -84,3 +231,46 @@ footer {
     width: 100%;
     height: 100%;
 }
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Disable The Bootstrap 3 Navbar Collapse */
+.navbar-collapse.collapse{
+  display: block !important;
+}
+
+.navbar-nav>li, .navbar-nav{
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child{
+  margin-right: -15px !important;
+}
+
+.navbar-right{
+  float: right !important;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+#music strong {
+/* 	color: black; */
+}
+
+
+/* Live At The Inter CDs */
+
+/*
+.cd-lati {
+	background-image: url(../img/illustration-of-a-music-record-400px.png);
+	background-position: center top;
+	background-size:  contain;
+	background-repeat: no-repeat;
+}
+*/
