@@ -44,3 +44,90 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
+
+<!-- Container (The Band Section) -->
+<!--
+<div id="band" class="container text-center">
+  <h3>THE BAND</h3>
+  <p><em>We love music!</em></p>
+  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Sharkie</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="img/255x255-Fin-B-Circle.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Fin Divily</p>
+        <p>Guitarist and Lead Vocalist</p>
+        <p>Loves long walks on the beach</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>The Filth</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="img/255x255-Filth-Circle.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Jonathan Jude</p>
+        <p>Vocals and guitar</p>
+        <p>Loves drummin'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>The Groove Machine</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="img/255x255-Fionn-Circle.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+      	<p>Fionn McGovern</p>
+        <p>Drummer</p>
+        <p>Loves maths</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+  </div>
+<br />
+<div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Baby-G</strong></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="img/255x255-Baby-G-Circle.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo4" class="collapse">
+        <p>Gareth Quinn Redmond</p> 
+        <p>Guitarist and Lead Violin</p>
+        <p>Loves long walks on the Moon</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Lazo</strong></p><br>
+      <a href="#demo5" data-toggle="collapse">
+        <img src="img/255x255-Leo-Circle.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo5" class="collapse">
+      	<p>Leo Walsh</p>
+        <p>Bass and Bagpipes</p>
+        <p>Loves flowers'</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Dread</strong></p><br>
+      <a href="#demo6" data-toggle="collapse">
+        <img src="img/255x255-Tom-Circle.png" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo6" class="collapse">
+        <p>Dreadserver</p>
+        <p>Genius!</p>
+        <p>Loves nothing more…</p>
+        <p>Member since 1988</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
