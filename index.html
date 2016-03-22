@@ -355,7 +355,7 @@ Your browser does not support the audio element.
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <textarea class="form-control" id="comments" name="message" placeholder="Comment" rows="5"></textarea>
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
@@ -498,5 +498,17 @@ $(document).ready(function(){
 	   });  
 	});  
 </script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-62382009-1','auto');
+            ga('require', 'linkid', 'linkid.js');
+            ga('send','pageview');
+        </script>
+ 
 </body>
 </html>
