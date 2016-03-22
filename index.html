@@ -26,27 +26,51 @@
     }
   </script>
   <script>
-    var $contactForm = $('#contactform');
-$contactForm.submit(function(e) {
-	e.preventDefault();
-	$.ajax({
-		url: '//formspree.io/etc@dreadserver.com',
-		method: 'POST',
-		data: $(this).serialize(),
-		dataType: 'json',
-		beforeSend: function() {
-			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-		},
-		success: function(data) {
-			$contactForm.find('.alert--loading').hide();
-			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
-		},
-		error: function(err) {
-			$contactForm.find('.alert--loading').hide();
-			$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-		}
+if (document.forms[0] && window.FormData) { ... }
+
+	var message = new Object();
+	message.loading = 'Loading...';
+	message.success = 'Thank you. Application received!';
+	message.failure = 'Whoops! There was a problem sending your message.';
+
+	var form = document.forms[0];
+
+	var statusMessage = document.createElement('div');
+	statusMessage.className = 'status';
+
+	// Set up the AJAX request
+	var request = new XMLHttpRequest();
+	request.open('POST', '//formspree.io/etc@dreadserver.coms', true);
+	request.setRequestHeader('accept', 'application/json');
+
+	// Listen for the form being submitted
+	form.addEventListener('submit', function(evt) {
+	    evt.preventDefault();
+	    form.appendChild(statusMessage);
+
+	    // Create a new FormData object passing in the form's key value pairs (that was easy!)
+	    var formData = new FormData(form);
+
+	    // Send the formData
+	    request.send(formData);
+
+	    // Watch for changes to request.readyState and update the statusMessage accordingly
+	    request.onreadystatechange = function () {
+	        // <4 =  waiting on response from server
+	        if (request.readyState < 4)
+	            statusMessage.innerHTML = message.loading;
+	        // 4 = Response from server has been completely loaded.
+	        else if (request.readyState === 4) {
+	            // 200 - 299 = successful
+	            if (request.status == 200 && request.status < 300)
+	                statusMessage.innerHTML = message.success;
+	            else
+	                form.insertAdjacentHTML('beforeend', message.failure);
+	        }
+	    }
 	});
-});
+
+}
    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -370,7 +394,7 @@ Your browser does not support the audio element.
     <div class="col-md-8">
       <div class="row">
         <div class="col-sm-6 form-group">
-        <form id="contactform" action="//formspree.io/etc@dreadserver.com" method="POST">
+        <form  action="//formspree.io/etc@dreadserver.com" method="POST">
           <input type="text" name="_gotcha" style="display:none" />
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
