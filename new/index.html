@@ -78,8 +78,8 @@
                 <div class="fill" style="background-image:url('img/1200x700-Baby-G-BW-DSC_0132.jpg');"></div>
                 <div class="carousel-caption well">
 <!--                     <img src="img/400x400-audio-27582_960_720.png" alt="400x400-audio-27582_960_720" width="200" height="200"> -->
-                    <a href="#music"><h2>LISTEN TO THE MUSIC</h2></a>
-                    <p>ETC. Live At The Inter.</p>
+                    <a href="#music" class="scroll-carousel"><h2>LISTEN TO THE MUSIC</h2></a>
+                    <p><strong>ETC. Live At The Inter.</strong></p>
                     <p>Recorded live upstairs at <a href="http://www.international-bar.com/" target="_blank"> The International Bar </a> Wicklow St, Dublin, Ireland.</p>
                 </div>
             </div>
@@ -89,8 +89,8 @@
                 <div class="carousel-caption well">
 
 <!--                     <img src="img/400x400-microphone-307365_960_720.png" alt="400x400-microphone-307365_960_720" width="200" height="200"> -->
-                    <a href="#gigs"><h2>UPCOMING GIG'S</h2></a>
-                    <p>Live music; we love it! </p>
+                    <a href="#gigs" class="scroll-carousel"><h2>UPCOMING GIG'S</h2></a>
+                    <p><strong> Live music… We love it!</strong></p>
                     <p>Keeping music real and recording with a live audience you just can't beat the feeling.</p>
                 </div>
             </div>
@@ -100,8 +100,8 @@
                 <div class="carousel-caption well">
 
 <!-- 	                <img src="img/400x400-contact-1.png" alt="400x400-contact-1" width="200" height="200"> -->
-	                <a href="#contact"><h2>CONTACT</h2></a>
-	                <P>We want to here from you.</P>
+	                <a href="#contact" class="scroll-carousel"><h2>CONTACT</h2></a>
+	                <P><strong>We want to here from you.</strong></P>
                     <p>Friend us on <a id="facebook-l" href="https://www.facebook.com/etcindependent" target="_blank"><i class="fa fa-facebook"></i> Facebook&raquo;</a> or follow us on <a id="twitter-l" target="_blank"  href="https://twitter.com/etcIndependent"><i class="fa fa-twitter"></i> Twitter &raquo;</a> but please don't look at our <a id="youtube-l" href="https://www.youtube.com/channel/UCy00vpBTqZCsz7Ex69imQFg" target="_blank" role="button"><i class="fa fa-youtube"></i> Youtube. &raquo;</a></p>
             </div>
         </div>
@@ -235,7 +235,18 @@ Your browser does not support the audio element.
         </div>
         </div>
       </div>
+      	<div class="well well-sm">
+      	          <strong>ETC. Live At The Inter - Full Album</strong>
+<center><img src="img/500x500-illustration-of-a-music-record.gif" alt="illustration-of-a-music-record-400px" width="400" height="320" class="img-responsive"></center>
+	<audio id="ETC_Live_At_The_Inter_Full_Album_MP3.mp3" controls preload="none" class="full-album">
+	<source src="audio/ETC_Live_At_The_Inter_Full_Album_MP3.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+	<br /><a href="licenses.html"><i class="cc cc-by-nc-nd-eu"> </i></a>  <a href="audio/ETC_Live_At_The_Inter_Full_Album_MP3.mp3" download><i class="fa fa-download fa-2x fa-2x"></i></a>
+
+	</div>
     </div>
+
 </div> <!-- container -->
 
 <!-- Container (GIGS Section) -->
@@ -425,7 +436,7 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
   
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a,.carousel-inner a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a,.carousel-inner a.scroll-carousel, footer a[href='#myPage']").on('click', function(event) {
 
     // Prevent default anchor click behavior
     event.preventDefault();
