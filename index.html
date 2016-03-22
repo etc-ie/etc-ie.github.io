@@ -25,53 +25,6 @@
        "url" : "http://www.etc.ie"
     }
   </script>
-  <script type="text/javascript">
-if (document.forms[0] && window.FormData) { ... }
-
-	var message = new Object();
-	message.loading = 'Loading...';
-	message.success = 'Thank you. Application received!';
-	message.failure = 'Whoops! There was a problem sending your message.';
-
-	var form = document.forms[0];
-
-	var statusMessage = document.createElement('div');
-	statusMessage.className = 'status';
-
-	// Set up the AJAX request
-	var request = new XMLHttpRequest();
-	request.open('POST', '//formspree.io/etc@dreadserver.coms', true);
-	request.setRequestHeader('accept', 'application/json');
-
-	// Listen for the form being submitted
-	form.addEventListener('submit', function(evt) {
-	    evt.preventDefault();
-	    form.appendChild(statusMessage);
-
-	    // Create a new FormData object passing in the form's key value pairs (that was easy!)
-	    var formData = new FormData(form);
-
-	    // Send the formData
-	    request.send(formData);
-
-	    // Watch for changes to request.readyState and update the statusMessage accordingly
-	    request.onreadystatechange = function () {
-	        // <4 =  waiting on response from server
-	        if (request.readyState < 4)
-	            statusMessage.innerHTML = message.loading;
-	        // 4 = Response from server has been completely loaded.
-	        else if (request.readyState === 4) {
-	            // 200 - 299 = successful
-	            if (request.status == 200 && request.status < 300)
-	                statusMessage.innerHTML = message.success;
-	            else
-	                form.insertAdjacentHTML('beforeend', message.failure);
-	        }
-	    }
-	});
-
-}
-   </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -394,7 +347,7 @@ Your browser does not support the audio element.
     <div class="col-md-8">
       <div class="row">
         <div class="col-sm-6 form-group">
-        <form action="//formspree.io/etc@dreadserver.com" method="POST">
+        <form>
           <input type="text" name="_gotcha" style="display:none" />
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
@@ -413,7 +366,38 @@ Your browser does not support the audio element.
     </div>
   </div>
   <br>
-  
+<script>
+    var contactForm = document.querySelector('form'),
+    inputName = contactForm.querySelector('[name="name"]'),
+    inputEmail = contactForm.querySelector('[name="email"]'),
+    textAreaMessage = contactForm.querySelector('[name="message"]'),
+    sendButton = contactForm.querySelector('button');
+
+    sendButton.addEventListener('click', function(event){
+      event.preventDefault(); // prevent the form to do the post.
+
+      sendButton.innerHTML = 'sending..';
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '//formspree.io/etc@dreadserver.com', true);
+      xhr.setRequestHeader("Accept", "application/json")
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+      xhr.send(
+        "name=" + inputName.value +
+        "&email=" + inputEmail.value +
+        "&message=" + textAreaMessage.value);
+
+      xhr.onloadend = function (res) {
+        if (res.target.status === 200){
+          sendButton.innerHTML = 'Message sent!';
+        }
+        else {
+          sendButton.innerHTML = 'Error!';
+        }
+      }
+    });
+</script>
 <!--
   <h3 class="text-center">From The Blog</h3>  
   <ul class="nav nav-tabs">
