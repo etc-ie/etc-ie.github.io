@@ -21,7 +21,7 @@
   .person:hover {
       border-color: #f1f1f1;
   }
-  .carousel-inner img {
+  .carousel-inner fill img {
       -webkit-filter: grayscale(90%);
       filter: grayscale(90%); /* make all photos black and white */ 
       width: 100%; /* Set width to 100% */
@@ -249,3 +249,13 @@ footer {
 #music strong {
 	color: black;
 }
+
+/* Live At The Inter CDs */
+/*
+.cd-lati {
+	background-image: url(../img/illustration-of-a-music-record-400px.png);
+	background-position: center top;
+	background-size:  contain;
+	background-repeat: no-repeat;
+}
+*/
