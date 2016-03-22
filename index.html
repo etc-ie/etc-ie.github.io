@@ -17,7 +17,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="js/jquery.mobile.custom.min.js"></script>
-  <script src="js/formspree.js"></script>
   <script type="application/ld+json">
     {  "@context" : "http://schema.org",
        "@type" : "WebSite",
@@ -25,6 +24,28 @@
        "alternateName" : "The Home Of ETC. On The Web",
        "url" : "http://www.etc.ie"
     }
+    
+    var $contactForm = $('#contactform');
+$contactForm.submit(function(e) {
+	e.preventDefault();
+	$.ajax({
+		url: '//formspree.io/etc@dreadserver.com',
+		method: 'POST',
+		data: $(this).serialize(),
+		dataType: 'json',
+		beforeSend: function() {
+			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+		},
+		success: function(data) {
+			$contactForm.find('.alert--loading').hide();
+			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+		},
+		error: function(err) {
+			$contactForm.find('.alert--loading').hide();
+			$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+		}
+	});
+});
    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -349,7 +370,6 @@ Your browser does not support the audio element.
       <div class="row">
         <div class="col-sm-6 form-group">
         <form id="contactform" action="//formspree.io/etc@dreadserver.com" method="POST">
-          <input type="hidden" name="_next" value="//etc.ie/new/index.html" />
           <input type="text" name="_gotcha" style="display:none" />
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
