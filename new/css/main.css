@@ -179,6 +179,12 @@
 	background-image: url("../img/trans-bg.png");
 	background-repeat: repeat;
 }
+#music .well {
+	background-color: transparent;
+	background-image: none;
+	background-repeat: repeat;
+}
+
 
 .well h4 {
     text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff;
@@ -254,7 +260,7 @@ footer {
 }
 
 #music strong {
-	color: black;
+/* 	color: black; */
 }
 
 
