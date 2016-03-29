@@ -119,11 +119,11 @@
   .navbar {
       font-family: Montserrat, sans-serif;
       margin-bottom: 0;
-      background-color: transparent;
       border: 0;
       font-size: 11px !important;
       letter-spacing: 4px;
       opacity: 0.9;
+      background-image: url(../img/trans-bg.png);
   }
   .navbar li a, .navbar .navbar-brand { 
       color: #d5d5d5 !important;
@@ -135,12 +135,12 @@
       color: #fff !important;
       background-color: transparent !important; 
       background-image: url(../img/nav-active-bg-50.png);
-      background-position: center center;
+      background-position: 15px 14px;
       background-repeat: no-repeat;
   }
   navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: transparent;
-    color: #555;
+     background-color: transparent;
+     color: #555;
 }
   .navbar-default .navbar-toggle {
       border-color: transparent;
